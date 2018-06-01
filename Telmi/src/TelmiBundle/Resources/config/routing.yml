@@ -2,6 +2,6 @@ telmi_homepage:
     path:     /
     defaults: { _controller: TelmiBundle:Default:index }
 
-diction:
-    path:     /diction/
+telmi_exercices:
+    path:     /exercices
     defaults: { _controller: TelmiBundle:Default:diction }

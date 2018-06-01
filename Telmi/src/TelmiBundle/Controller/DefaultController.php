@@ -8,7 +8,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('TelmiBundle:Default:index.html.twig');
+        return $this->render('TelmiBundle:Telmi:index.html.twig');
     }
 
     public function dictionAction()

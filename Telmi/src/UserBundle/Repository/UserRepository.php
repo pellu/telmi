@@ -1,6 +1,6 @@
 <?php
 
-namespace TelmiBundle\Repository;
+namespace OC\UserBundle\Repository;
 
 /**
  * UserRepository
