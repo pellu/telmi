@@ -1,0 +1,7 @@
+telmi_homepage:
+    path:     /
+    defaults: { _controller: TelmiBundle:Default:index }
+
+diction:
+    path:     /diction/
+    defaults: { _controller: TelmiBundle:Default:diction }

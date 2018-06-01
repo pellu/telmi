@@ -1,9 +1,9 @@
 <?php
 
-namespace AppBundle;
+namespace TelmiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AppBundle extends Bundle
+class TelmiBundle extends Bundle
 {
 }
