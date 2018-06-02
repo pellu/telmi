@@ -1,6 +1,6 @@
 <?php
 
-namespace OC\UserBundle\Repository;
+namespace UserBundle\Repository;
 
 /**
  * UserRepository
