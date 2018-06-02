@@ -5,3 +5,11 @@ telmi_homepage:
 telmi_exercices:
     path:     /exercices
     defaults: { _controller: TelmiBundle:Default:diction }
+
+telmi_pro_1st_login:
+    path:   /activate-pro
+    defaults: { _controller: TelmiBundle:Default:addPro }
+
+telmi_pro_1st_login:
+    path:   /profile
+    defaults: { _controller: TelmiBundle:Default:addPro }
