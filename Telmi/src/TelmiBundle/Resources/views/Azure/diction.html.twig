@@ -1,5 +1,107 @@
-{% extends 'TelmiBundle::layout.html.twig' %}
 
-{% block body %}
-Hello Diction !
-{% endblock %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Speech Sample</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link src="{{ asset('build/app.css') }}">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body class="text-center">
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal body -->
+        <div id="modal" class="modal-body">
+          <img id="etoiles" src="#" alt="#">
+          <h4 class="modal-title">EXELLENT</h4>
+          <p>C'est un sans fautes continue comme ca blablabla bla bla</p>
+          <div class="bouttonContainer">
+            <button type="button" id="menu" class="btn btn-primary" data-dismiss="modal">Menu</button>
+            <a href="#" id="newGame" data-dismiss="modal">
+              <img src="#" alt="#">
+            </a>
+
+            <button type="button" id="again" class="btn btn-warning" data-dismiss="modal">Recommence</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal" id="perdu">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal body -->
+        <div id="modal" class="modal-body">
+          <img id="etoiles" src="#" alt="#">
+          <h4 class="modal-title">PERDU</h4>
+          <p>Domage, retente ta chance</p>
+          <div class="bouttonContainer">
+            <button type="button" id="menu" class="btn btn-primary" data-dismiss="modal">Menu</button>
+            <a href="#" id="newGame" data-dismiss="modal">
+              <img src="#" alt="#">
+            </a>
+
+            <button type="button" id="again" class="btn btn-warning" data-dismiss="modal">Recommence</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Telmi</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="#">Accueil</a>
+            <a class="nav-link active" href="#">Exercices</a>
+            <a class="nav-link" href="#">Statistiques</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h3 class="cover-heading">Telmi le peroquet</h3>
+        <p class="lead">Dans ce mini-jeu repete tout ce que dit Telmi et devient toi-même un superbe peroquet.</p>
+        <h4 class="Mot">Répéte après moi :</h4>
+        <p id="keyword"></p>
+
+        <p class="lead commande">
+          <button href="#" class="btn btn-lg btn-secondary" id="startBtn">A toi de jouer</button>
+          <button href="#" class="btn btn-lg btn-secondary" id="stopBtn" disabled>J'ai terminé</button>
+        </p>
+
+
+        <span id="statusDiv"></span>
+        <span id="hypothesisDiv"></span>
+
+        <div class="result">
+          <p>Résultat de tas diction :</p>
+          <p id="phraseDiv"></p>
+        </div>
+      </main>
+    </div>
+
+    <!-- SDK REFERENCE -->
+    <script src="{{ asset('build/speech.sdk.bundle.js') }}"></script>
+    <script src="{{ asset('build/telmi.js') }}"></script>
+
+</body>
+</html>
